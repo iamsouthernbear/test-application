@@ -1,0 +1,16 @@
+.table, input {
+  margin-top: 5px;
+}
+
+th {
+  cursor: default;
+}
+
+td {
+  cursor: pointer;
+  min-width: 108px;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

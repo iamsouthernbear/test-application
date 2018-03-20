@@ -1,0 +1,9 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">JSON Data of post</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <pre>{{data | json}}</pre>
+</div>
