@@ -14,7 +14,7 @@
       </tr>
       </thead>
       <tbody class="">
-      <tr *ngFor="let hit of hits | searchByTitle : searchTitle ; let i = index" (click)="openModal(hits[i])">
+      <tr *ngFor="let hit of hits | searchByTitle : searchTitle" (click)="openModal(hit)">
         <td>{{ hit['title'] }}</td>
         <td>{{ hit['url'] }}</td>
         <td>{{ hit['created_at'] | date:'shortDate' }}</td>

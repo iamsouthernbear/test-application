@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       this.service
         .getHits()
         .subscribe(
-          response => this.hits = response['hits'],
+          response => this.hits = response,
           errors => console.log(errors)
         );
     });

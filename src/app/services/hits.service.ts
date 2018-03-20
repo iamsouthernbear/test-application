@@ -10,13 +10,12 @@ export class HitsService {
 
   public getHits() {
     const URL = 'https://hn.algolia.com/api/v1/search_by_date?tags=story';
-    // return Observable.create((observer: Observer<Object[]>) => {
-    //   this.http.get(URL).subscribe(
-    //     response => observer.next(response),
-    //     errors => observer.error(errors)
-    //   );
-    // });
-    return this.http.get(URL);
+    return Observable.create((observer: Observer<Object[]>) => {
+      this.http.get(URL).subscribe(
+        response => observer.next(response['hits']),
+        errors => observer.error(errors)
+      );
+    });
   }
 
 }
